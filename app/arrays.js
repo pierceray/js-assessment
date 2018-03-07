@@ -82,14 +82,40 @@ exports.arraysAnswers = {
   },
 
   duplicates: function(arr) {
+    var seen = {};
+    var dupes = [];
 
+    for (var i = 0, len = arr.length; i < len; i++) {
+      seen[arr[i]] = seen[arr[i]] ? seen[arr[i]] + 1 : 1;
+    }
+
+    for (var item in seen) {
+      if (seen.hasOwnProperty(item) && seen[item] > 1) {
+        // parseInt was added because the keys were considered strings
+        dupes.push(parseInt(item, 10));
+      }
+    }
+
+    return dupes;
   },
 
   square: function(arr) {
+    var sqArray = [];
 
+    for (var i = 0; i < arr.length; i++) {
+      sqArray.push(arr[i] * arr[i]);
+    }
+
+    return sqArray;
   },
 
   findAllOccurrences: function(arr, target) {
-
+    var indexArray = [];
+    for (var i = 0; i < arr.length; i++) {
+      if(arr[i] === target) {
+        indexArray.push(i);
+      }
+    }
+    return indexArray;
   }
 };
