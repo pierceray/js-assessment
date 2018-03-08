@@ -85,7 +85,7 @@ exports.arraysAnswers = {
     var seen = {};
     var dupes = [];
 
-    for (var i = 0, len = arr.length; i < len; i++) {
+    for (var i = 0; i < arr.length; i++) {
       seen[arr[i]] = seen[arr[i]] ? seen[arr[i]] + 1 : 1;
     }
 
