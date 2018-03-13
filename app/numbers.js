@@ -15,7 +15,7 @@ exports.numbersAnswers = {
 
     // Loop 8 times
     for (var i = 7; i > -1; i--) {
-        binaryArray.push(num & (1 << i) ? 1 : 0);
+      binaryArray.push(num & (1 << i) ? 1 : 0);
     }
 
     return binaryArray.join('');

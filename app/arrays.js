@@ -72,7 +72,7 @@ exports.arraysAnswers = {
 
   count: function(arr, item) {
     var count = 0;
-    for(var i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
       if (arr[i] === item){
         count++;
       }
@@ -112,7 +112,7 @@ exports.arraysAnswers = {
   findAllOccurrences: function(arr, target) {
     var indexArray = [];
     for (var i = 0; i < arr.length; i++) {
-      if(arr[i] === target) {
+      if (arr[i] === target) {
         indexArray.push(i);
       }
     }
