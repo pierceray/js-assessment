@@ -6,7 +6,12 @@ exports.stringsAnswers = {
   },
 
   wordWrap: function(str, cols) {
+    var words = str.split(' ');
+    var phrase;
 
+    for (var i = 0; i < words.length; i++) {
+      words[i];
+    }
   },
 
   reverseString: function(str) {
